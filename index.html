@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Dhanush Gubala — Front-End Developer</title>
+<meta name="description" content="Dhanush Gubala — Front-End Developer portfolio. HTML, CSS, JavaScript, React, Python.">
+<meta name="theme-color" content="#0A090C">
+<link rel="canonical" href="https://your-username.github.io/your-repo-name/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dhanush Gubala — Front-End Developer">
+<meta property="og:description" content="Front-End Developer from Madanapalli, India — HTML, CSS, JavaScript, React, Python. View projects, resume and contact details.">
+<meta property="og:image" content="assets/dhanush.jpg">
+<meta property="og:url" content="https://your-username.github.io/your-repo-name/">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dhanush Gubala — Front-End Developer">
+<meta name="twitter:description" content="Front-End Developer from Madanapalli, India — HTML, CSS, JavaScript, React, Python.">
+<meta name="twitter:image" content="assets/dhanush.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FF9556'/%3E%3Cstop offset='1' stop-color='%23E8402A'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='30' fill='%230A090C'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-weight='700' font-size='30' fill='url(%23g)' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+  try{
+    var saved = localStorage.getItem('dg-theme');
+    if(saved) document.documentElement.setAttribute('data-theme', saved);
+  }catch(e){}
+</script>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ambient background -->
+<div class="bg-scene" aria-hidden="true">
+  <div class="blob blob-orange"></div>
+  <div class="blob blob-red"></div>
+  <div class="grain"></div>
+</div>
+<div class="spotlight" id="spotlight" aria-hidden="true"></div>
+
+<header class="glass-nav" id="siteHeader">
+  <div class="nav-inner">
+    <a href="#hero" class="logo">dhanush<span>.dev</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" data-nav>About</a>
+      <a href="#skills" data-nav>Skills</a>
+      <a href="#education" data-nav>Education</a>
+      <a href="#projects" data-nav>Projects</a>
+      <a href="#resume" data-nav>Resume</a>
+      <a href="#contact" data-nav>Contact</a>
+    </nav>
+    <div class="theme-switch">
+      <button class="theme-btn" id="themeBtn" aria-label="Change color theme" aria-expanded="false">
+        <span class="theme-btn-dot"></span>
+      </button>
+      <div class="theme-panel glass-card" id="themePanel">
+        <div class="theme-panel-title">Theme</div>
+        <div class="theme-grid">
+          <button class="swatch" data-theme="">
+            <span class="swatch-dot" style="background:linear-gradient(135deg,#FF9556,#E8402A)"></span>
+            <span class="swatch-label">Default</span>
+          </button>
+          <button class="swatch" data-theme="gold">
+            <span class="swatch-dot" style="background:linear-gradient(135deg,#F6D488,#B8860B)"></span>
+            <span class="swatch-label">Black · Gold · Ivory</span>
+          </button>
+          <button class="swatch" data-theme="navy">
+            <span class="swatch-dot" style="background:linear-gradient(135deg,#67E8F9,#3B82F6)"></span>
+            <span class="swatch-label">Navy · Cyan · White</span>
+          </button>
+          <button class="swatch" data-theme="purple">
+            <span class="swatch-dot" style="background:linear-gradient(135deg,#D8B4FE,#EC4899)"></span>
+            <span class="swatch-label">Purple · Pink · Blue</span>
+          </button>
+          <button class="swatch" data-theme="emerald">
+            <span class="swatch-dot" style="background:linear-gradient(135deg,#6EE7B7,#D8C08C)"></span>
+            <span class="swatch-label">Emerald · Cream · White</span>
+          </button>
+          <button class="swatch" data-theme="sunset">
+            <span class="swatch-dot" style="background:linear-gradient(135deg,#FFD166,#9333EA)"></span>
+            <span class="swatch-label">Orange · Purple · Yellow</span>
+          </button>
+          <button class="swatch" data-theme="charcoal">
+            <span class="swatch-dot" style="background:linear-gradient(135deg,#E5E9EE,#3B82F6)"></span>
+            <span class="swatch-label">Charcoal · Silver · Blue</span>
+          </button>
+          <button class="swatch" data-theme="crimson">
+            <span class="swatch-dot" style="background:linear-gradient(135deg,#FF6B52,#7A140A)"></span>
+            <span class="swatch-label">Red · Black · White</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" data-nav>About</a>
+  <a href="#skills" data-nav>Skills</a>
+  <a href="#education" data-nav>Education</a>
+  <a href="#projects" data-nav>Projects</a>
+  <a href="#resume" data-nav>Resume</a>
+  <a href="#contact" data-nav>Contact</a>
+</div>
+
+<main>
+
+  <section id="hero" class="section hero">
+    <div class="reveal">
+      <div class="kicker">front-end developer</div>
+      <h1 class="hero-name">Dhanush<br>Gubala</h1>
+      <p class="hero-role"><span id="typedRole">Turning ideas into interactive websites</span><span class="type-cursor" aria-hidden="true"></span></p>
+      <p class="hero-loc">Madanapalli, Andhra Pradesh</p>
+      <p class="hero-bio">
+        I'm a Front-End Developer who turns users' ideas and imagination into cool, modern, and
+        interactive websites. I bring their vision to life through clean design, creative
+        development, and engaging digital experiences.
+      </p>
+      <div class="hero-links">
+        <a href="#projects" class="btn btn-solid">View projects</a>
+        <a href="#contact" class="btn btn-glass">Get in touch</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal" style="--delay:1">
+      <div class="orb-card glass-card">
+        <img src="assets/dhanush.jpg" alt="Dhanush Gubala" class="hero-photo">
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Python</span><span>Figma</span>
+      <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Python</span><span>Figma</span>
+    </div>
+  </div>
+
+  <section class="stats-strip">
+    <div class="stat glass-card pad reveal"><strong>2+</strong><span>Projects shipped</span></div>
+    <div class="stat glass-card pad reveal" style="--delay:1"><strong>4</strong><span>Languages &amp; tools</span></div>
+    <div class="stat glass-card pad reveal" style="--delay:2"><strong>BCA</strong><span>In progress</span></div>
+    <div class="stat glass-card pad reveal" style="--delay:3"><strong>Now</strong><span>Immediate joiner</span></div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="kicker reveal">about</div>
+    <h2 class="reveal">A bit about me</h2>
+    <div class="about-grid">
+      <div class="glass-card pad reveal">
+        <p>
+          I'm currently pursuing a <strong>BCA</strong>, building a foundation in web development
+          while working on real projects outside the classroom. I focus on
+          <strong>HTML, CSS, and JavaScript</strong>, and I'm expanding into Python and React.
+        </p>
+        <p>
+          I like turning a rough idea into something people can actually click through — clean layouts,
+          smooth interactions, and interfaces that feel simple to use even when there's a lot happening
+          behind the scenes.
+        </p>
+        <div class="tags" style="margin-top:20px;">
+          <span class="tag">Self-motivated learner</span>
+          <span class="tag">Team player</span>
+          <span class="tag">Clear communicator</span>
+        </div>
+      </div>
+      <div class="fact-list glass-card pad reveal" style="--delay:1">
+        <div class="fact"><span>Location</span><span>Madanapalli, AP</span></div>
+        <div class="fact"><span>Focus</span><span>Front-End Development</span></div>
+        <div class="fact"><span>Education</span><span>BCA (Pursuing)</span></div>
+        <div class="fact"><span>Languages</span><span>English, Telugu</span></div>
+        <div class="fact"><span>Availability</span><span>Immediate Joiner</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="kicker reveal">skills</div>
+    <h2 class="reveal">What I work with</h2>
+
+    <div class="skill-row glass-card pad reveal">
+      <h3>Languages</h3>
+      <div class="tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Python</span>
+      </div>
+    </div>
+    <div class="skill-row glass-card pad reveal" style="--delay:1">
+      <h3>Frameworks</h3>
+      <div class="tags">
+        <span class="tag">React</span>
+      </div>
+    </div>
+    <div class="skill-row glass-card pad reveal" style="--delay:2">
+      <h3>Tools</h3>
+      <div class="tags">
+        <span class="tag">Figma</span>
+        <span class="tag">Claude</span>
+        <span class="tag">ChatGPT</span>
+        <span class="tag">Git (learning)</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="kicker reveal">projects</div>
+    <h2 class="reveal">Selected work</h2>
+    <div class="projects-grid">
+
+      <div class="project-card glass-card reveal" role="button" tabindex="0" aria-haspopup="dialog">
+        <div class="project-cover cover-orange">
+          <svg width="64" height="64" viewBox="0 0 80 80" fill="none">
+            <rect x="10" y="10" width="60" height="60" rx="12" stroke="#fff" stroke-width="2"/>
+            <circle cx="40" cy="40" r="16" fill="#fff"/>
+          </svg>
+        </div>
+        <div class="project-body">
+          <h3>Advanced Portfolio</h3>
+          <p>A personal portfolio site built with smooth animations and transitions for an engaging, modern browsing experience.</p>
+          <div class="tags">
+            <span class="tag">Figma</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+          </div>
+          <a class="project-link" href="https://shrub-proud-63143160.figma.site" target="_blank" rel="noopener">View live
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card glass-card reveal" style="--delay:1" role="button" tabindex="0" aria-haspopup="dialog">
+        <div class="project-cover cover-red">
+          <svg width="64" height="64" viewBox="0 0 80 80" fill="none">
+            <path d="M20 60 L20 30 L40 15 L60 30 L60 60 Z" stroke="#fff" stroke-width="2" fill="none"/>
+            <line x1="40" y1="60" x2="40" y2="38" stroke="#fff" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="project-body">
+          <h3>Travel Expenses Estimator</h3>
+          <p>A tool that helps split and organize trip costs across transport, accommodation, food, and activities.</p>
+          <div class="tags">
+            <span class="tag">Figma</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span><span class="tag">Python</span>
+          </div>
+          <a class="project-link" href="https://sunset-nimbus-29988474.figma.site" target="_blank" rel="noopener">View live
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <div class="kicker reveal">education</div>
+    <h2 class="reveal">Academic background</h2>
+    <div class="timeline">
+      <div class="timeline-item glass-card pad reveal">
+        <span class="timeline-year">Pursuing</span>
+        <div>
+          <h3>BCA</h3>
+          <p>Shri Gnanambica Degree College · SVU, Tirupati</p>
+        </div>
+      </div>
+      <div class="timeline-item glass-card pad reveal" style="--delay:1">
+        <span class="timeline-year">2023 · 64%</span>
+        <div>
+          <h3>Intermediate (MPC)</h3>
+          <p>Sri Krishna Reddy Jr. College, Madanapalli · BIEAP, AP</p>
+        </div>
+      </div>
+      <div class="timeline-item glass-card pad reveal" style="--delay:2">
+        <span class="timeline-year">2021 · 79%</span>
+        <div>
+          <h3>SSC</h3>
+          <p>Arunodaya James Memorial High School, Madanapalli · BSEAP, AP</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="learning" class="section">
+    <div class="kicker reveal">certifications &amp; learning</div>
+    <h2 class="reveal">Always leveling up</h2>
+    <div class="learning-grid">
+      <div class="glass-card pad reveal">
+        <h3>Completed</h3>
+        <p>HTML &amp; CSS — foundational coursework (Academic)</p>
+      </div>
+      <div class="glass-card pad reveal" style="--delay:1">
+        <h3>In progress</h3>
+        <p>JavaScript Basics — via online platforms</p>
+      </div>
+      <div class="glass-card pad reveal" style="--delay:2">
+        <h3>Exploring</h3>
+        <p>Responsive Web Design · Git Basics · Python fundamentals</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="section">
+    <div class="kicker reveal">resume</div>
+    <h2 class="reveal">Download my resume</h2>
+    <div class="resume-row">
+      <div class="resume-card glass-card pad reveal">
+        <div class="resume-info">
+          <div class="resume-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+          </div>
+          <div>
+            <strong>Dhanush Gubala — Resume</strong>
+            <span>PDF · Web Development Fresher</span>
+          </div>
+        </div>
+        <a href="assets/Dhanush_Gubala_Resume.pdf" download class="btn btn-solid">Download</a>
+      </div>
+
+      <div class="qr-card glass-card pad reveal" style="--delay:1">
+        <div id="qrcode" class="qr-box"></div>
+        <div>
+          <strong>Share this portfolio</strong>
+          <span>Scan to open this site on another device</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="kicker reveal">contact</div>
+    <h2 class="contact-lead reveal">Let's build something <span>together.</span></h2>
+
+    <div class="contact-links reveal" style="--delay:1">
+      <a href="mailto:dhanush7yadav@gmail.com" class="glass-card">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg>
+        dhanush7yadav@gmail.com
+      </a>
+      <button class="copy-btn glass-card" id="copyEmailBtn" data-email="dhanush7yadav@gmail.com" aria-label="Copy email address">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+      <a href="https://www.linkedin.com/in/gdhanushyadav777/" target="_blank" rel="noopener" class="glass-card">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M10 9v12M10 13a4 4 0 018 0v8"/></svg>
+        LinkedIn
+      </a>
+    </div>
+
+    <form id="contactForm" class="contact-form glass-card pad reveal" style="--delay:2" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-row">
+        <label for="cf-name">Name</label>
+        <input type="text" id="cf-name" name="name" required>
+      </div>
+      <div class="form-row">
+        <label for="cf-email">Email</label>
+        <input type="email" id="cf-email" name="email" required>
+      </div>
+      <div class="form-row">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-solid" id="cf-submit">Send message</button>
+      <p class="form-status" id="formStatus" role="status"></p>
+    </form>
+  </section>
+
+</main>
+
+<!-- Project modal -->
+<div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-card glass-card">
+    <button class="modal-close" id="modalClose" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="modal-cover" id="modalCover"></div>
+    <div class="modal-body">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <div class="tags" id="modalTags"></div>
+      <a id="modalLink" class="btn btn-solid" target="_blank" rel="noopener">View live project</a>
+    </div>
+  </div>
+</div>
+
+<!-- Back to top -->
+<button class="back-to-top glass-card" id="backToTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- Copy toast -->
+<div class="toast glass-card" id="toast">Copied to clipboard</div>
+
+<footer>
+  <span>&copy; <span id="year"></span> Dhanush Gubala</span>
+  <span>Madanapalli, Andhra Pradesh</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
