@@ -354,4 +354,3 @@ if (qrBox && window.QRCode) {
     });
   } catch (err) { /* QR library unavailable — box stays empty */ }
 }
-
